@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI"
+             typeLanguage="http://www.w3.org/2001/XMLSchema"
+             expressionLanguage="http://www.w3.org/1999/XPath"
+             targetNamespace="http://bpmn.io/schema/bpmn">
+  <process id="mobileApp" name="Mobile Application" isExecutable="true">
+    <startEvent id="startEvent1" name="Открытие сервиса"/>
+    <sequenceFlow id="flow1" sourceRef="startEvent1" targetRef="task1"/>
+    <task id="task1" name="Проверка токена"/>
+    <exclusiveGateway id="gateway1"/>
+    <sequenceFlow id="flow2" sourceRef="task1" targetRef="gateway1"/>
+    <sequenceFlow id="flow3" sourceRef="gateway1" targetRef="task2" name="Токен действителен"/>
+    <task id="task2" name="Открытие главной страницы"/>
+    <endEvent id="endEvent1"/>
+    <sequenceFlow id="flow4" sourceRef="task2" targetRef="endEvent1"/>
+    <sequenceFlow id="flow5" sourceRef="gateway1" targetRef="task3" name="Токен недействителен"/>
+    <task id="task3" name="Ввод логина и пароля"/>
+    <sequenceFlow id="flow6" sourceRef="task3" targetRef="task4"/>
+    <task id="task4" name="Проверка данных"/>
+    <exclusiveGateway id="gateway2"/>
+    <sequenceFlow id="flow7" sourceRef="task4" targetRef="gateway2"/>
+    <sequenceFlow id="flow8" sourceRef="gateway2" targetRef="task2" name="Данные верны"/>
+    <sequenceFlow id="flow9" sourceRef="gateway2" targetRef="endEvent2" name="Данные неверны"/>
+    <endEvent id="endEvent2" name="Ошибка"/>
+  </process>
+  
+  <process id="webApp" name="Web Application" isExecutable="true">
+    <startEvent id="startEvent3" name="Открытие сервиса"/>
+    <sequenceFlow id="flow10" sourceRef="startEvent3" targetRef="task5"/>
+    <task id="task5" name="Проверка токена"/>
+    <exclusiveGateway id="gateway3"/>
+    <sequenceFlow id="flow11" sourceRef="task5" targetRef="gateway3"/>
+    <sequenceFlow id="flow12" sourceRef="gateway3" targetRef="task6" name="Токен действителен"/>
+    <task id="task6" name="Проверка прав пользователя"/>
+    <exclusiveGateway id="gateway4"/>
+    <sequenceFlow id="flow13" sourceRef="task6" targetRef="gateway4"/>
+    <sequenceFlow id="flow14" sourceRef="gateway4" targetRef="task7" name="Права ROLE_ADMIN"/>
+    <task id="task7" name="Открытие главной страницы"/>
+    <endEvent id="endEvent3"/>
+    <sequenceFlow id="flow15" sourceRef="task7" targetRef="endEvent3"/>
+    <sequenceFlow id="flow16" sourceRef="gateway4" targetRef="endEvent4" name="Права не ROLE_ADMIN"/>
+    <endEvent id="endEvent4" name="Ошибка"/>
+    <sequenceFlow id="flow17" sourceRef="gateway3" targetRef="task8" name="Токен недействителен"/>
+    <task id="task8" name="Ввод логина и пароля"/>
+    <sequenceFlow id="flow18" sourceRef="task8" targetRef="task9"/>
+    <task id="task9" name="Проверка данных"/>
+    <exclusiveGateway id="gateway5"/>
+    <sequenceFlow id="flow19" sourceRef="task9" targetRef="gateway5"/>
+    <sequenceFlow id="flow20" sourceRef="gateway5" targetRef="task6" name="Данные верны"/>
+    <sequenceFlow id="flow21" sourceRef="gateway5" targetRef="endEvent5" name="Данные неверны"/>
+    <endEvent id="endEvent5" name="Ошибка"/>
+  </process>
+</definitions>

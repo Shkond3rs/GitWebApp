@@ -1,0 +1,11 @@
+/* src/components/navigation/AdminHeader.css */
+
+.admin-header {
+  background-color: white;
+  padding: 10px 20px;
+}
+
+.admin-header h1 {
+  color: black;
+  margin: 0;
+}

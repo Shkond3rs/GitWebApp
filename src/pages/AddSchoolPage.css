@@ -1,0 +1,169 @@
+.add-school-container {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gray-background {
+  background-color: rgba(128, 128, 128, 0.5);
+  padding: 16px;
+  border-radius: 32px;
+  max-width: 600px;
+  /* Устанавливаем максимальную ширину */
+  width: 100%;
+  transition: height 0.5s ease;
+  /* Добавляем переход для высоты */
+  /* overflow: hidden; */
+}
+
+.form-block {
+  background-color: white;
+  padding: 20px 40px;
+  border-radius: 27px;
+  border: 6px solid #0056b3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  font-size: 24px;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.program-select {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.program-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.program-button span {
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+.program-dropdown {
+  position: relative;
+}
+
+.program-dropdown input {
+  font-size: 16px;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-height: 150px;
+  overflow-y: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.dropdown-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.image-upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.image-upload-label {
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  cursor: pointer;
+  color: #007bff;
+  font-size: 16px;
+  padding: 8px 12px;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  margin-top: 16px;
+  box-sizing: border-box;
+}
+
+.image-upload-label:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+#imageUpload {
+  display: none;
+}
+
+.image-preview {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: contain;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  background-color: #f9f9f9;
+}
+
+.submit-button {
+  width: 260px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.description-input {
+  font-size: 24px;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  height: 150px;
+  resize: none;
+  box-sizing: border-box;
+}

@@ -1,0 +1,56 @@
+/* Задаем стиль для всего body */
+body {
+  background-image: url('../../assets/images/background.png');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.lock-icon {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.login-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.8); 
+  border-radius: 4px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 24px;
+}
+
+.login-form input {
+  width: 250px;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-form input::t {
+  padding-left: 8px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+}

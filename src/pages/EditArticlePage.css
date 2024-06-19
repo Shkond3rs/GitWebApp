@@ -1,0 +1,7 @@
+/* src/pages/AddArticlePage.css */
+
+.content {
+    padding: 20px;
+    margin-top: 20px; /* Отступ сверху для размещения контента ниже навигационной панели */
+  }
+  
